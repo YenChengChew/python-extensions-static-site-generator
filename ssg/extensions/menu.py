@@ -8,7 +8,7 @@ def collect_files(source, site_parsers):
 
     for path in source.rglob("*"):
         for parser in list(filter(valid, site_parsers)):
-            if parser.valid_file_ext(path.suffx):
+            if parser.valid_file_ext(path.suffix):
                 files.append(path)
 
 @hooks.register("generate_menu")
